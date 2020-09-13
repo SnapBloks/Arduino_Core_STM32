@@ -580,7 +580,7 @@ Disco.name=Discovery
 
 Disco.build.core=arduino
 Disco.build.board=Disco
-Disco.build.extra_flags=-D{build.product_line} {build.enable_usb} {build.xSerial}
+Disco.build.extra_flags=-D{build.product_line} {build.enable_usb} {build.xSerial} {build.bootloader_flags}
 
 # DISCO_F030R8 board
 Disco.menu.pnum.DISCO_F030R8=STM32F030R8-DISCVL
@@ -617,6 +617,10 @@ Disco.menu.pnum.DISCO_F072RB_SOFTDFU.build.series=STM32F0xx
 Disco.menu.pnum.DISCO_F072RB_SOFTDFU.build.product_line=STM32F072xB
 Disco.menu.pnum.DISCO_F072RB_SOFTDFU.build.variant=DISCO_F072RB_SOFTDFU
 Disco.menu.pnum.DISCO_F072RB_SOFTDFU.build.cmsis_lib_gcc=arm_cortexM0l_math
+Disco.menu.pnum.DISCO_F072RB_SOFTDFU.build.startup_file=-DCUSTOM_STARTUP_FILE
+Disco.menu.pnum.DISCO_F072RB_SOFTDFU.build.bootloader_flags=-DVARIANT_SUPPORT_SOFTDFU
+#Disco.menu.pnum.DISCO_F072RB_SOFTDFU.build.vid=0x0483
+#Disco.menu.pnum.DISCO_F072RB_SOFTDFU.build.pid=0xdf11
 
 #DISCO_F100RB board
 Disco.menu.pnum.DISCO_F100RB=STM32F100RB-DISCVL
@@ -740,6 +744,12 @@ Disco.menu.upload_method.dfuMethod=STM32CubeProgrammer (DFU)
 Disco.menu.upload_method.dfuMethod.upload.protocol=2
 Disco.menu.upload_method.dfuMethod.upload.options=-g
 Disco.menu.upload_method.dfuMethod.upload.tool=stm32CubeProg
+
+Disco.menu.upload_method.dfusMethod=SoftDFU Upload
+Disco.menu.upload_method.dfusMethod.upload.protocol=softdfu
+Disco.menu.upload_method.dfusMethod.upload.tool=softdfu_upload
+Disco.menu.upload_method.dfusMethod.upload.usbID=0483:df11
+Disco.menu.upload_method.dfusMethod.upload.altID=0
 
 ################################################################################
 # Eval boards
