@@ -606,6 +606,18 @@ Disco.menu.pnum.DISCO_F072RB.build.product_line=STM32F072xB
 Disco.menu.pnum.DISCO_F072RB.build.variant=DISCO_F072RB
 Disco.menu.pnum.DISCO_F072RB.build.cmsis_lib_gcc=arm_cortexM0l_math
 
+# DISCO_F072RB_SOFTDFU board
+Disco.menu.pnum.DISCO_F072RB_SOFTDFU=STM32F072B-DISC-SOFTDFU
+Disco.menu.pnum.DISCO_F072RB_SOFTDFU.node="DFU Soft Upload needs USBSerial"
+Disco.menu.pnum.DISCO_F072RB_SOFTDFU.upload.maximum_size=131072
+Disco.menu.pnum.DISCO_F072RB_SOFTDFU.upload.maximum_data_size=16384
+Disco.menu.pnum.DISCO_F072RB_SOFTDFU.build.mcu=cortex-m0
+Disco.menu.pnum.DISCO_F072RB_SOFTDFU.build.board=DISCO_F072RB_SOFTDFU
+Disco.menu.pnum.DISCO_F072RB_SOFTDFU.build.series=STM32F0xx
+Disco.menu.pnum.DISCO_F072RB_SOFTDFU.build.product_line=STM32F072xB
+Disco.menu.pnum.DISCO_F072RB_SOFTDFU.build.variant=DISCO_F072RB_SOFTDFU
+Disco.menu.pnum.DISCO_F072RB_SOFTDFU.build.cmsis_lib_gcc=arm_cortexM0l_math
+
 #DISCO_F100RB board
 Disco.menu.pnum.DISCO_F100RB=STM32F100RB-DISCVL
 Disco.menu.pnum.DISCO_F100RB.node=DIS_F100RB
