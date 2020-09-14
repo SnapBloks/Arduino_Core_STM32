@@ -212,9 +212,9 @@ tools.remoteproc_gen.upload.pattern="{busybox}" sh "{path}/{script}" generate "{
 # STM32 built-in DFU upload with SoftDFU protocol
 tools.softdfu_upload.cmd=softdfu_upload.sh
 tools.softdfu_upload.cmd.windows=softdfu_upload.bat
-tools.softdfu_upload.path={runtime.hardware.path}/tools/STM32Tools/tools/win
-tools.softdfu_upload.path.macosx={runtime.hardware.path}/tools/STM32Tools/tools/macosx
-tools.softdfu_upload.path.linux={runtime.hardware.path}/tools/STM32Tools/tools/linux
+tools.softdfu_upload.path={runtime.tools.STM32Tools.path}/tools/win
+tools.softdfu_upload.path.macosx={runtime.tools.STM32Tools.path}/tools/macosx
+tools.softdfu_upload.path.linux={runtime.tools.STM32Tools.path}/tools/linux
 tools.softdfu_upload.upload.params.verbose=
 tools.softdfu_upload.upload.params.quiet=
 tools.softdfu_upload.upload.pattern="{path}/{cmd}" {serial.port.file} {upload.altID} {upload.usbID} "{build.path}/{build.project_name}.bin"
