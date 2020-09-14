@@ -619,8 +619,7 @@ Disco.menu.pnum.DISCO_F072RB_SOFTDFU.build.variant=DISCO_F072RB_SOFTDFU
 Disco.menu.pnum.DISCO_F072RB_SOFTDFU.build.cmsis_lib_gcc=arm_cortexM0l_math
 Disco.menu.pnum.DISCO_F072RB_SOFTDFU.build.startup_file=-DCUSTOM_STARTUP_FILE
 Disco.menu.pnum.DISCO_F072RB_SOFTDFU.build.bootloader_flags=-DVARIANT_SUPPORT_SOFTDFU
-#Disco.menu.pnum.DISCO_F072RB_SOFTDFU.build.vid=0x0483
-#Disco.menu.pnum.DISCO_F072RB_SOFTDFU.build.pid=0xdf11
+Disco.menu.pnum.DISCO_F072RB_SOFTDFU.build.enable_usb={build.usb_flags} -DUSBD_USE_CDC
 
 #DISCO_F100RB board
 Disco.menu.pnum.DISCO_F100RB=STM32F100RB-DISCVL
