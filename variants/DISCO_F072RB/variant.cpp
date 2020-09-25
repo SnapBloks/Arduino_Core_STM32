@@ -158,6 +158,23 @@ void variant_soft_dfu_hook(uint8_t *Buf, uint32_t *Len)
   }
 }
 
+void variant_soft_serial_hook(uint8_t c)
+{
+  uint32_t i;
+  static unsigned char passkey[] = "1EAF";
+  static unsigned char passkey_index = 0;
+  
+  /* reading buffer for a sequential bytes that form a pass key */
+  if (c == passkey[passkey_index])
+    passkey_index++;
+  else
+    passkey_index = 0;
+  /* jump to bootloader mode when the pass key found */
+  if (passkey_index == 4) {
+    dfu_reset_to_bootloader_magic = RESET_TO_BOOTLOADER_MAGIC_CODE;
+    NVIC_SystemReset();
+  }
+}
 /**
   * @brief  System Clock Configuration
   * @param  None

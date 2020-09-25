@@ -100,6 +100,10 @@ static UART_HandleTypeDef *uart_handlers[UART_NUM] = {NULL};
 
 static serial_t serial_debug = { .uart = NP, .index = UART_NUM };
 
+#ifdef VARIANT_SUPPORT_SOFTSERIAL
+  void variant_soft_serial_hook(uint8_t c);
+#endif
+
 /* Aim of the function is to get serial_s pointer using huart pointer */
 /* Highly inspired from magical linux kernel's "container_of" */
 serial_t *get_serial_obj(UART_HandleTypeDef *huart)
@@ -683,6 +687,9 @@ int uart_getc(serial_t *obj, unsigned char *c)
   }
 
   *c = (unsigned char)(obj->recv);
+#ifdef VARIANT_SUPPORT_SOFTSERIAL
+    variant_soft_serial_hook(*c);
+#endif
   /* Restart RX irq */
   HAL_UART_Receive_IT(uart_handlers[obj->index], &(obj->recv), 1);
 

@@ -218,3 +218,14 @@ tools.softdfu_upload.path.linux={runtime.tools.STM32Tools.path}/tools/linux
 tools.softdfu_upload.upload.params.verbose=
 tools.softdfu_upload.upload.params.quiet=
 tools.softdfu_upload.upload.pattern="{path}/{cmd}" {serial.port.file} {upload.altID} {upload.usbID} "{build.path}/{build.project_name}.bin"
+
+# STM32 built-in UART upload with Soft-Serial protocol
+tools.softserial_upload.cmd=softserial_upload.sh
+tools.softserial_upload.cmd.windows=softserial_upload.bat
+tools.softserial_upload.path={runtime.tools.STM32Tools.path}/tools/win
+tools.softserial_upload.path.macosx={runtime.tools.STM32Tools.path}/tools/macosx
+#tools.softserial_upload.path.linux={runtime.tools.STM32Tools.path}/tools/linux
+tools.softserial_upload.path.linux={runtime.hardware.path}/tools/STM32Tools/tools/linux
+tools.softserial_upload.upload.params.verbose=
+tools.softserial_upload.upload.params.quiet=
+tools.softserial_upload.upload.pattern="{path}/{cmd}" {upload.protocol} "{build.path}/{build.project_name}.bin" {upload.options} -s

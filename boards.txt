@@ -606,8 +606,7 @@ Disco.menu.pnum.DISCO_F072RB.build.product_line=STM32F072xB
 Disco.menu.pnum.DISCO_F072RB.build.variant=DISCO_F072RB
 Disco.menu.pnum.DISCO_F072RB.build.cmsis_lib_gcc=arm_cortexM0l_math
 Disco.menu.pnum.DISCO_F072RB.build.startup_file=-DCUSTOM_STARTUP_FILE
-Disco.menu.pnum.DISCO_F072RB.build.bootloader_flags=-DVARIANT_SUPPORT_SOFTDFU
-Disco.menu.pnum.DISCO_F072RB.build.enable_usb={build.usb_flags} -DUSBD_USE_CDC
+Disco.menu.pnum.DISCO_F072RB.build.bootloader_flags=-DVARIANT_SUPPORT_SOFTSERIAL
 
 #DISCO_F100RB board
 Disco.menu.pnum.DISCO_F100RB=STM32F100RB-DISCVL
@@ -737,6 +736,11 @@ Disco.menu.upload_method.dfusMethod.upload.protocol=softdfu
 Disco.menu.upload_method.dfusMethod.upload.tool=softdfu_upload
 Disco.menu.upload_method.dfusMethod.upload.usbID=0483:df11
 Disco.menu.upload_method.dfusMethod.upload.altID=0
+
+Disco.menu.upload_method.softSerialMethod=Soft-Serial Upload
+Disco.menu.upload_method.softSerialMethod.upload.protocol=1
+Disco.menu.upload_method.softSerialMethod.upload.options={serial.port.file}
+Disco.menu.upload_method.softSerialMethod.upload.tool=softserial_upload
 
 ################################################################################
 # Eval boards
